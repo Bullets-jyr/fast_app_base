@@ -1,9 +1,11 @@
 import 'package:fast_app_base/common/common.dart';
+import 'package:fast_app_base/common/dart/extension/num_duration_extension.dart';
 import 'package:fast_app_base/common/widget/round_button_theme.dart';
 import 'package:fast_app_base/common/widget/w_big_button.dart';
 import 'package:fast_app_base/common/widget/w_round_button.dart';
 import 'package:fast_app_base/common/widget/w_rounded_container.dart';
 import 'package:fast_app_base/screen/dialog/d_message.dart';
+import 'package:fast_app_base/screen/main/s_main.dart';
 import 'package:fast_app_base/screen/main/tab/home/bank_account_dummy.dart';
 import 'package:fast_app_base/screen/main/tab/home/w_bank_account.dart';
 import 'package:fast_app_base/screen/main/tab/home/w_ttoss_app_bar.dart';
@@ -23,9 +25,15 @@ class HomeFragment extends StatelessWidget {
       color: Colors.black,
       child: Stack(
         children: [
-          Padding(
-            padding: const EdgeInsets.only(top: 60.0),
+          RefreshIndicator(
+            edgeOffset: TtossAppBar.appBarHeight,
+            onRefresh: () async {
+              await sleepAsync(500.ms);
+            },
             child: SingleChildScrollView(
+              // 우리가 일반적으로 숫자를 나열하고, 명확하게 알기 어려운 상수를 일컬어서 매직 넘버라고 합니다.
+              // 코딩을 할 때, 최대한 매직 넘버가 없는 것이 좋습니다.
+              padding: const EdgeInsets.only(top: TtossAppBar.appBarHeight, bottom: MainScreenState.bottomNavigatorHeight),
               child: Column(
                 children: [
                   BigButton(

@@ -2,6 +2,8 @@ import 'package:fast_app_base/common/common.dart';
 import 'package:flutter/material.dart';
 
 class TtossAppBar extends StatefulWidget {
+  // 여러 코드에서 참조할 수 있는 상수를 만들때는 static const 키워드로 상수를 만듭니다.
+  static const double appBarHeight = 60;
   const TtossAppBar({super.key});
 
   @override
@@ -13,7 +15,7 @@ class _TtossAppBarState extends State<TtossAppBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 60.0,
+      height: TtossAppBar.appBarHeight,
       // app theme 접근
       color: context.appColors.appBarBackground,
       child: Row(
