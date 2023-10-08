@@ -1,4 +1,5 @@
 import 'package:fast_app_base/common/common.dart';
+import 'package:fast_app_base/screen/notification/s_notification.dart';
 import 'package:flutter/material.dart';
 
 class TtossAppBar extends StatefulWidget {
@@ -35,9 +36,11 @@ class _TtossAppBarState extends State<TtossAppBar> {
           width10,
           Tap(
             onTap: () {
-              setState(() {
-                _showRedDot = !_showRedDot;
-              });
+              // setState(() {
+              //   _showRedDot = !_showRedDot;
+              // });
+              // 알림 화면으로 이동
+              Nav.push(NotificationScreen());
             },
             child: Stack(
               children: [
@@ -58,19 +61,20 @@ class _TtossAppBarState extends State<TtossAppBar> {
                         ),
                       ),
                     ),
-                  ) else Positioned.fill(
-                  child: Align(
-                    alignment: Alignment.topRight,
-                    child: Container(
-                      width: 6,
-                      height: 6,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.blue,
-                      ),
-                    ),
-                  ),
-                ),
+                  )
+                // else Positioned.fill(
+                //   child: Align(
+                //     alignment: Alignment.topRight,
+                //     child: Container(
+                //       width: 6,
+                //       height: 6,
+                //       decoration: BoxDecoration(
+                //         shape: BoxShape.circle,
+                //         color: Colors.blue,
+                //       ),
+                //     ),
+                //   ),
+                // ),
               ],
             ),
           ),
