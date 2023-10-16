@@ -141,8 +141,9 @@ class TextFieldWithDeleteState extends State<TextFieldWithDelete> {
                 enabledBorder: const UnderlineInputBorder(
                   borderSide: BorderSide(color: Colors.transparent),
                 ),
-                focusedBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color: context.appColors.focusedBorder, width: 8),
+                focusedBorder: const UnderlineInputBorder(
+                  borderSide: BorderSide(color: Colors.transparent),
+                  // borderSide: BorderSide(color: context.appColors.focusedBorder, width: 1),
                 ),
               ),
             ),

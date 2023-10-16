@@ -1,5 +1,6 @@
 import 'package:fast_app_base/common/common.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_utils/src/extensions/double_extensions.dart';
 
 abstract mixin class StockPercentageDataProvider {
 

@@ -110,14 +110,14 @@ flutter:
     - assets/image/
     - assets/image/icon/
     - assets/image/flag/
-    - assets/image/splash/
+    - assets/image/benefit/
     - assets/image/darkmode/
     - assets/image/bank/
-    - assets/image/benefit/
     - assets/image/stock/
     - assets/image/credit_card/
     - assets/image/illustration/
     - assets/image/notification/
+    - assets/image/splash/
     - assets/translations/
     - assets/
 
