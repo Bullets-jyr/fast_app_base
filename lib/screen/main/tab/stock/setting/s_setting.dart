@@ -2,6 +2,7 @@ import 'package:fast_app_base/common/common.dart';
 import 'package:fast_app_base/common/dart/extension/datetime_extension.dart';
 import 'package:fast_app_base/common/data/preference/app_preferences.dart';
 import 'package:fast_app_base/common/widget/w_big_button.dart';
+import 'package:fast_app_base/screen/opensource/s_opensource.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../common/data/preference/prefs.dart';
@@ -57,7 +58,8 @@ class _SettingScreenState extends State<SettingScreen> {
             ),
           ),
           // date time
-          Obx(() => BigButton(
+          Obx(
+            () => BigButton(
               '날짜 ${Prefs.birthday.get() == null ? "" : Prefs.birthday.get()?.formattedDate}',
               onTap: () async {
                 final date = await showDatePicker(
@@ -74,7 +76,8 @@ class _SettingScreenState extends State<SettingScreen> {
             ),
           ),
           // number
-          Obx(() => BigButton(
+          Obx(
+            () => BigButton(
               '저장된 숫자 ${Prefs.number.get()}',
               onTap: () async {
                 final number = await NumberDialog().show();
@@ -83,6 +86,12 @@ class _SettingScreenState extends State<SettingScreen> {
                 }
               },
             ),
+          ),
+          BigButton(
+            '오픈소스 화면',
+            onTap: () async {
+              Nav.push(OpensourceScreen());
+            },
           ),
         ],
       ),

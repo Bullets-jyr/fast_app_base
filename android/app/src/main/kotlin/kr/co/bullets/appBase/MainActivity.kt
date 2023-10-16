@@ -1,4 +1,4 @@
-package com.example.fast_app_base
+package kr.co.bullets.appBase
 
 import io.flutter.embedding.android.FlutterActivity
 
