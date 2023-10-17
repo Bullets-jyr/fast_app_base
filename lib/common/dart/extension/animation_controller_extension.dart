@@ -1,4 +1,5 @@
 import 'package:fast_app_base/common/cli_common.dart';
+import 'package:fast_app_base/common/common.dart';
 import 'package:flutter/widgets.dart';
 
 extension AnimationControllerExtension on AnimationController {

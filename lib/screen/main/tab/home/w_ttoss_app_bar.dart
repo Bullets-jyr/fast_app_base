@@ -76,7 +76,7 @@ class _TtossAppBarState extends State<TtossAppBar> {
                 //   ),
                 // ),
               ],
-            ),
+            ).animate(onPlay: (controller) => controller.repeat()).shake(duration: 2100.ms, hz: 3).then().fadeOut(duration: 1000.ms),
           ),
           width10,
         ],
